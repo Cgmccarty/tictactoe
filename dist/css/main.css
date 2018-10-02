@@ -25,13 +25,41 @@ button {
   background-color: lightblue;
 }
 
+button.key.top {
+  border-bottom: 4px solid black;
+  border-radius: 8%;
+}
+
 button.key.middle {
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  border-radius: 8%;
+}
+
+button.key.bottom {
+  border-top: 4px solid black;
+  border-radius: 8%;
+}
+
+button.key.left {
+  border-right: 4px solid black;
+  border-radius: 8%;
+}
+
+button.key.center {
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+  border-radius: 8%;
+}
+
+button.key.right {
+  border-left: 4px solid black;
+  border-radius: 8%;
 }
 
 .row {
-  background-color: black;
+  display: flex;
+  border-radius: 8%;
 }
 
 button:focus {
@@ -39,7 +67,8 @@ button:focus {
 }
 
 button:active {
-  background-color: darkgray;
+  background-color: white;
+  border-radius: 8%;
 }
 
 /*# sourceMappingURL=main.css.map */
