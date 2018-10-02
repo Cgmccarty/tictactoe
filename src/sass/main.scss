@@ -59,7 +59,14 @@ button.key.right {
 
 .row {
   display: flex;
+  justify-content: center;
   border-radius: 8%;
+}
+
+h3 {
+  margin: 10px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
 }
 
 button:focus {

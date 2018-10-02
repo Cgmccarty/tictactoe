@@ -5,15 +5,25 @@ let playerOneChoices = [];
 const playerTwo = "O";
 let playerTwoTurn = 1;
 let playerTwoChoices = [];
-let top_left = document.getElementsByClassName("top left");
-let top_center = document.getElementsByClassName("top center");
-let top_right = document.getElementsByClassName("top right");
-let middle_left = document.getElementsByClassName("middle left");
-let middle_center = document.getElementsByClassName("middle center");
-let middle_right = document.getElementsByClassName("middle right");
-let bottom_left = document.getElementsByClassName("bottom left");
-let bottom_center = document.getElementsByClassName("bottom center");
-let bottom_right = document.getElementsByClassName("bottom right");
+const top_left = document.getElementsByClassName("top left");
+const top_center = document.getElementsByClassName("top center");
+const top_right = document.getElementsByClassName("top right");
+const middle_left = document.getElementsByClassName("middle left");
+const middle_center = document.getElementsByClassName("middle center");
+const middle_right = document.getElementsByClassName("middle right");
+const bottom_left = document.getElementsByClassName("bottom left");
+const bottom_center = document.getElementsByClassName("bottom center");
+const bottom_right = document.getElementsByClassName("bottom right");
+const winConditions = [
+  [top_left, top_center, top_right],
+  [middle_left, middle_center, middle_right],
+  [bottom_left, bottom_center, bottom_right],
+  [top_left, middle_left, bottom_left],
+  [top_center, middle_center, bottom_center],
+  [top_right, middle_right, bottom_right],
+  [top_left, middle_center, bottom_right],
+  [top_right, middle_center, bottom_left]
+];
 
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
@@ -29,7 +39,7 @@ function start() {
 }
 
 function turnLogic(event) {
-  if (wasUsed()) {
+  if (wasUsed(event)) {
     return;
   }
   else {
@@ -57,6 +67,6 @@ function checkIfWin(playerChoices) {
   console.log(playerChoices);
 }
 
-function wasUsed() {
+function wasUsed(event) {
   return (event.target.innerHTML == "X" || event.target.innerHTML == "O");
 }
