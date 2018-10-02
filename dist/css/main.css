@@ -1,18 +1,45 @@
-html {
-  background-color: black;
+html, body {
+  background-color: lightblue;
+  display: inline;
+  height: 100%;
 }
 
 h1 {
-  text-align: center;
+  font-family: sans-serif;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  height: 50%;
 }
 
 .ticTacToeBoard {
   display: flex;
   justify-content: center;
+  height: 50%;
 }
 
 button {
   font-size: 80px;
   width: 100px;
-  background-color:
+  border: 2px black;
+  background-color: lightblue;
 }
+
+button.key.middle {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.row {
+  background-color: black;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  background-color: darkgray;
+}
+
+/*# sourceMappingURL=main.css.map */
